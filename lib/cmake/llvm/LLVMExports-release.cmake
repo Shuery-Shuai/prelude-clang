@@ -104,6 +104,16 @@ set_target_properties(LLVMInterfaceStub PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMInterfaceStub )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMInterfaceStub "${_IMPORT_PREFIX}/lib/libLLVMInterfaceStub.a" )
 
+# Import target "LLVMIRPrinter" for configuration "Release"
+set_property(TARGET LLVMIRPrinter APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMIRPrinter PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMIRPrinter.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMIRPrinter )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMIRPrinter "${_IMPORT_PREFIX}/lib/libLLVMIRPrinter.a" )
+
 # Import target "LLVMIRReader" for configuration "Release"
 set_property(TARGET LLVMIRReader APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMIRReader PROPERTIES
@@ -223,6 +233,16 @@ set_target_properties(LLVMExtensions PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS LLVMExtensions )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMExtensions "${_IMPORT_PREFIX}/lib/libLLVMExtensions.a" )
+
+# Import target "LLVMFrontendHLSL" for configuration "Release"
+set_property(TARGET LLVMFrontendHLSL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMFrontendHLSL PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMFrontendHLSL.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMFrontendHLSL )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMFrontendHLSL "${_IMPORT_PREFIX}/lib/libLLVMFrontendHLSL.a" )
 
 # Import target "LLVMFrontendOpenACC" for configuration "Release"
 set_property(TARGET LLVMFrontendOpenACC APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -493,6 +513,16 @@ set_target_properties(LLVMDebugInfoGSYM PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS LLVMDebugInfoGSYM )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMDebugInfoGSYM "${_IMPORT_PREFIX}/lib/libLLVMDebugInfoGSYM.a" )
+
+# Import target "LLVMDebugInfoLogicalView" for configuration "Release"
+set_property(TARGET LLVMDebugInfoLogicalView APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMDebugInfoLogicalView PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMDebugInfoLogicalView.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMDebugInfoLogicalView )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMDebugInfoLogicalView "${_IMPORT_PREFIX}/lib/libLLVMDebugInfoLogicalView.a" )
 
 # Import target "LLVMDebugInfoMSF" for configuration "Release"
 set_property(TARGET LLVMDebugInfoMSF APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -927,12 +957,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMWindowsManifest "${_IMPORT_PREFIX}/lib/l
 # Import target "LTO" for configuration "Release"
 set_property(TARGET LTO APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LTO PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLTO.so.15"
-  IMPORTED_SONAME_RELEASE "libLTO.so.15"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLTO.so.16git"
+  IMPORTED_SONAME_RELEASE "libLTO.so.16git"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS LTO )
-list(APPEND _IMPORT_CHECK_FILES_FOR_LTO "${_IMPORT_PREFIX}/lib/libLTO.so.15" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LTO "${_IMPORT_PREFIX}/lib/libLTO.so.16git" )
 
 # Import target "LLVMgold" for configuration "Release"
 set_property(TARGET LLVMgold APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1116,6 +1146,15 @@ set_target_properties(llvm-cxxmap PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS llvm-cxxmap )
 list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-cxxmap "${_IMPORT_PREFIX}/bin/llvm-cxxmap" )
+
+# Import target "llvm-debuginfo-analyzer" for configuration "Release"
+set_property(TARGET llvm-debuginfo-analyzer APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(llvm-debuginfo-analyzer PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/llvm-debuginfo-analyzer"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS llvm-debuginfo-analyzer )
+list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-debuginfo-analyzer "${_IMPORT_PREFIX}/bin/llvm-debuginfo-analyzer" )
 
 # Import target "llvm-debuginfod" for configuration "Release"
 set_property(TARGET llvm-debuginfod APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1436,6 +1475,15 @@ set_target_properties(llvm-remark-size-diff PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS llvm-remark-size-diff )
 list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-remark-size-diff "${_IMPORT_PREFIX}/bin/llvm-remark-size-diff" )
 
+# Import target "llvm-remarkutil" for configuration "Release"
+set_property(TARGET llvm-remarkutil APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(llvm-remarkutil PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/llvm-remarkutil"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS llvm-remarkutil )
+list(APPEND _IMPORT_CHECK_FILES_FOR_llvm-remarkutil "${_IMPORT_PREFIX}/bin/llvm-remarkutil" )
+
 # Import target "llvm-rtdyld" for configuration "Release"
 set_property(TARGET llvm-rtdyld APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(llvm-rtdyld PROPERTIES
@@ -1547,12 +1595,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_opt "${_IMPORT_PREFIX}/bin/opt" )
 # Import target "Remarks" for configuration "Release"
 set_property(TARGET Remarks APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Remarks PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libRemarks.so.15"
-  IMPORTED_SONAME_RELEASE "libRemarks.so.15"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libRemarks.so.16git"
+  IMPORTED_SONAME_RELEASE "libRemarks.so.16git"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS Remarks )
-list(APPEND _IMPORT_CHECK_FILES_FOR_Remarks "${_IMPORT_PREFIX}/lib/libRemarks.so.15" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_Remarks "${_IMPORT_PREFIX}/lib/libRemarks.so.16git" )
 
 # Import target "sancov" for configuration "Release"
 set_property(TARGET sancov APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1571,15 +1619,6 @@ set_target_properties(sanstats PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS sanstats )
 list(APPEND _IMPORT_CHECK_FILES_FOR_sanstats "${_IMPORT_PREFIX}/bin/sanstats" )
-
-# Import target "split-file" for configuration "Release"
-set_property(TARGET split-file APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(split-file PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/split-file"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS split-file )
-list(APPEND _IMPORT_CHECK_FILES_FOR_split-file "${_IMPORT_PREFIX}/bin/split-file" )
 
 # Import target "verify-uselistorder" for configuration "Release"
 set_property(TARGET verify-uselistorder APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
