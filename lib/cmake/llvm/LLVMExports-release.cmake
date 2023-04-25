@@ -224,6 +224,16 @@ set_target_properties(LLVMDWARFLinker PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMDWARFLinker )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMDWARFLinker "${_IMPORT_PREFIX}/lib/libLLVMDWARFLinker.a" )
 
+# Import target "LLVMDWARFLinkerParallel" for configuration "Release"
+set_property(TARGET LLVMDWARFLinkerParallel APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMDWARFLinkerParallel PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMDWARFLinkerParallel.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMDWARFLinkerParallel )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMDWARFLinkerParallel "${_IMPORT_PREFIX}/lib/libLLVMDWARFLinkerParallel.a" )
+
 # Import target "LLVMExtensions" for configuration "Release"
 set_property(TARGET LLVMExtensions APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMExtensions PROPERTIES
@@ -894,6 +904,16 @@ set_target_properties(LLVMPasses PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMPasses )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMPasses "${_IMPORT_PREFIX}/lib/libLLVMPasses.a" )
 
+# Import target "LLVMTargetParser" for configuration "Release"
+set_property(TARGET LLVMTargetParser APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMTargetParser PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMTargetParser.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMTargetParser )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMTargetParser "${_IMPORT_PREFIX}/lib/libLLVMTargetParser.a" )
+
 # Import target "LLVMTextAPI" for configuration "Release"
 set_property(TARGET LLVMTextAPI APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMTextAPI PROPERTIES
@@ -957,23 +977,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMWindowsManifest "${_IMPORT_PREFIX}/lib/l
 # Import target "LTO" for configuration "Release"
 set_property(TARGET LTO APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LTO PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLTO.so.16git"
-  IMPORTED_SONAME_RELEASE "libLTO.so.16git"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLTO.so.16"
+  IMPORTED_SONAME_RELEASE "libLTO.so.16"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS LTO )
-list(APPEND _IMPORT_CHECK_FILES_FOR_LTO "${_IMPORT_PREFIX}/lib/libLTO.so.16git" )
-
-# Import target "LLVMgold" for configuration "Release"
-set_property(TARGET LLVMgold APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(LLVMgold PROPERTIES
-  IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/LLVMgold.so"
-  IMPORTED_NO_SONAME_RELEASE "TRUE"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS LLVMgold )
-list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMgold "${_IMPORT_PREFIX}/lib/LLVMgold.so" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LTO "${_IMPORT_PREFIX}/lib/libLTO.so.16" )
 
 # Import target "llvm-ar" for configuration "Release"
 set_property(TARGET llvm-ar APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1595,12 +1604,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_opt "${_IMPORT_PREFIX}/bin/opt" )
 # Import target "Remarks" for configuration "Release"
 set_property(TARGET Remarks APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Remarks PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libRemarks.so.16git"
-  IMPORTED_SONAME_RELEASE "libRemarks.so.16git"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libRemarks.so.16"
+  IMPORTED_SONAME_RELEASE "libRemarks.so.16"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS Remarks )
-list(APPEND _IMPORT_CHECK_FILES_FOR_Remarks "${_IMPORT_PREFIX}/lib/libRemarks.so.16git" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_Remarks "${_IMPORT_PREFIX}/lib/libRemarks.so.16" )
 
 # Import target "sancov" for configuration "Release"
 set_property(TARGET sancov APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

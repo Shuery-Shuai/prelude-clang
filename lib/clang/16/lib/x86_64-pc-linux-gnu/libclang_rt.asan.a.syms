@@ -41,8 +41,6 @@
   __interceptor___lxstat;
   __interceptor___lxstat64;
   __interceptor___overflow;
-  __interceptor___pthread_mutex_lock;
-  __interceptor___pthread_mutex_unlock;
   __interceptor___snprintf_chk;
   __interceptor___sprintf_chk;
   __interceptor___strdup;
@@ -140,7 +138,6 @@
   __interceptor_fwrite;
   __interceptor_get_current_dir_name;
   __interceptor_getaddrinfo;
-  __interceptor_getcontext;
   __interceptor_getcwd;
   __interceptor_getdelim;
   __interceptor_getgrent;
@@ -222,6 +219,7 @@
   __interceptor_localtime_r;
   __interceptor_longjmp;
   __interceptor_lrand48_r;
+  __interceptor_makecontext;
   __interceptor_mallinfo;
   __interceptor_malloc;
   __interceptor_malloc_stats;
@@ -293,8 +291,6 @@
   __interceptor_pthread_getname_np;
   __interceptor_pthread_getschedparam;
   __interceptor_pthread_join;
-  __interceptor_pthread_mutex_lock;
-  __interceptor_pthread_mutex_unlock;
   __interceptor_pthread_mutexattr_getprioceiling;
   __interceptor_pthread_mutexattr_getprotocol;
   __interceptor_pthread_mutexattr_getpshared;
@@ -520,8 +516,6 @@
   __lxstat;
   __lxstat64;
   __overflow;
-  __pthread_mutex_lock;
-  __pthread_mutex_unlock;
   __sancov_*;
   __sanitizer_acquire_crash_state;
   __sanitizer_annotate_contiguous_container;
@@ -1352,7 +1346,6 @@
   fwrite;
   get_current_dir_name;
   getaddrinfo;
-  getcontext;
   getcwd;
   getdelim;
   getgrent;
@@ -1434,6 +1427,7 @@
   localtime_r;
   longjmp;
   lrand48_r;
+  makecontext;
   mallinfo;
   malloc;
   malloc_stats;
@@ -1503,8 +1497,6 @@
   pthread_getname_np;
   pthread_getschedparam;
   pthread_join;
-  pthread_mutex_lock;
-  pthread_mutex_unlock;
   pthread_mutexattr_getprioceiling;
   pthread_mutexattr_getprotocol;
   pthread_mutexattr_getpshared;

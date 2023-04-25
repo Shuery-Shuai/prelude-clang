@@ -451,6 +451,15 @@ set_target_properties(clangHandleLLVM PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS clangHandleLLVM )
 list(APPEND _IMPORT_CHECK_FILES_FOR_clangHandleLLVM "${_IMPORT_PREFIX}/lib/libclangHandleLLVM.a" )
 
+# Import target "clang-linker-wrapper" for configuration "Release"
+set_property(TARGET clang-linker-wrapper APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clang-linker-wrapper PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-linker-wrapper"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS clang-linker-wrapper )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-linker-wrapper "${_IMPORT_PREFIX}/bin/clang-linker-wrapper" )
+
 # Import target "clang-offload-packager" for configuration "Release"
 set_property(TARGET clang-offload-packager APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-offload-packager PROPERTIES
@@ -508,22 +517,40 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clang-refactor "${_IMPORT_PREFIX}/bin/clang-
 # Import target "clang-cpp" for configuration "Release"
 set_property(TARGET clang-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-cpp PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so.16git"
-  IMPORTED_SONAME_RELEASE "libclang-cpp.so.16git"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so.16"
+  IMPORTED_SONAME_RELEASE "libclang-cpp.so.16"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-cpp )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so.16git" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so.16" )
 
 # Import target "libclang" for configuration "Release"
 set_property(TARGET libclang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libclang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so.16.0.0git"
-  IMPORTED_SONAME_RELEASE "libclang.so.16git"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so.16.0.2"
+  IMPORTED_SONAME_RELEASE "libclang.so.16"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS libclang )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib/libclang.so.16.0.0git" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib/libclang.so.16.0.2" )
+
+# Import target "amdgpu-arch" for configuration "Release"
+set_property(TARGET amdgpu-arch APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(amdgpu-arch PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/amdgpu-arch"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS amdgpu-arch )
+list(APPEND _IMPORT_CHECK_FILES_FOR_amdgpu-arch "${_IMPORT_PREFIX}/bin/amdgpu-arch" )
+
+# Import target "nvptx-arch" for configuration "Release"
+set_property(TARGET nvptx-arch APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(nvptx-arch PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/nvptx-arch"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS nvptx-arch )
+list(APPEND _IMPORT_CHECK_FILES_FOR_nvptx-arch "${_IMPORT_PREFIX}/bin/nvptx-arch" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

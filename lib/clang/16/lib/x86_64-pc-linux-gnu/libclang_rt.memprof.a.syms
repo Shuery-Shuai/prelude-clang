@@ -31,8 +31,6 @@
   __interceptor___lxstat;
   __interceptor___lxstat64;
   __interceptor___overflow;
-  __interceptor___pthread_mutex_lock;
-  __interceptor___pthread_mutex_unlock;
   __interceptor___snprintf_chk;
   __interceptor___sprintf_chk;
   __interceptor___strdup;
@@ -280,8 +278,6 @@
   __interceptor_pthread_getname_np;
   __interceptor_pthread_getschedparam;
   __interceptor_pthread_join;
-  __interceptor_pthread_mutex_lock;
-  __interceptor_pthread_mutex_unlock;
   __interceptor_pthread_mutexattr_getprioceiling;
   __interceptor_pthread_mutexattr_getprotocol;
   __interceptor_pthread_mutexattr_getpshared;
@@ -501,8 +497,6 @@
   __lxstat64;
   __memprof_*;
   __overflow;
-  __pthread_mutex_lock;
-  __pthread_mutex_unlock;
   __sanitizer_acquire_crash_state;
   __sanitizer_cov_8bit_counters_init;
   __sanitizer_cov_bool_flag_init;
@@ -1467,8 +1461,6 @@
   pthread_getname_np;
   pthread_getschedparam;
   pthread_join;
-  pthread_mutex_lock;
-  pthread_mutex_unlock;
   pthread_mutexattr_getprioceiling;
   pthread_mutexattr_getprotocol;
   pthread_mutexattr_getpshared;
